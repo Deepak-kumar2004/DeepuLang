@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Wrapper script to run DeepuLang without installation.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Project root is parent of bin
+PROJECT_ROOT="${SCRIPT_DIR%/bin}"
+exec python3 -m deepulang "$@"

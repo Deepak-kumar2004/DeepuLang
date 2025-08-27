@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepulang"
+version = "0.1.1"
+description = "A minimal demo language (DeepuLang) with lexer, parser, interpreter"
+authors = [{ name = "DeepuLang Authors" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+keywords = ["language", "interpreter", "demo", "dsl"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Interpreters",
+    "Development Status :: 3 - Alpha",
+]
+
+[project.urls]
+Homepage = "https://example.com/deepulang"
+Repository = "https://example.com/deepulang/repo"
+Issues = "https://example.com/deepulang/issues"
+Documentation = "https://example.com/deepulang/docs"
+
+[project.scripts]
+deepulang = "deepulang:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["deepulang*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "build",
+    "twine",
+]

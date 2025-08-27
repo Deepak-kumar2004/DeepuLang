@@ -1,0 +1,5 @@
+# Hello World in DeepuLang
+# Declare a variable and print it
+let greeting be "Hello, world!"
+say greeting
+say "welcome to the demo language DeepuLang"
